@@ -1,5 +1,6 @@
 <?php
 
+define('BASE_PATH', dirname(__DIR__));
 define('BASE_VIEW_PATH', dirname(__DIR__) . DIRECTORY_SEPARATOR . 'resources' . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR);
 define('BASE_RESOURCES_PATH', dirname(__DIR__) . DIRECTORY_SEPARATOR . 'resources' . DIRECTORY_SEPARATOR);
 

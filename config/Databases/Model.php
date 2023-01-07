@@ -8,6 +8,7 @@ abstract class Model extends Database
 
     public function __construct()
     {
+        parent::__construct();
         $this->table = strtolower(explode('\\', get_class($this))[2]) . 's';
     }
 

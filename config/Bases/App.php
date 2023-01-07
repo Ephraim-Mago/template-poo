@@ -4,6 +4,7 @@ namespace Config\Bases;
 
 use Config\Routes\Route;
 use Config\Exceptions\Routes\NotFoundException;
+use \Dotenv\Dotenv;
 
 class App
 {
@@ -15,6 +16,8 @@ class App
     public static function run()
     {
         try {
+            $dotenv = Dotenv::createImmutable(BASE_PATH);
+            $dotenv->load();
             (new Route())->run();
         } catch (NotFoundException $e) {
             return $e->error404();
