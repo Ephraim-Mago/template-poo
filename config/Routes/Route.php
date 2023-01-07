@@ -27,6 +27,21 @@ class Route
         self::$routes['POST'][] = new Router($path, $action);
     }
 
+    public static function put(string $path, string $action): void
+    {
+        self::$routes['PUT'][] = new Router($path, $action);
+    }
+
+    public static function delete(string $path, string $action): void
+    {
+        self::$routes['DELETE'][] = new Router($path, $action);
+    }
+
+    public static function patch(string $path, string $action): void
+    {
+        self::$routes['PATCH'][] = new Router($path, $action);
+    }
+
     public function run()
     {
         foreach (self::$routes[$_SERVER['REQUEST_METHOD']] as $route) {
